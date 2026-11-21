@@ -1,0 +1,76 @@
+@import './tokens.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: #F5F3FF;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Glassmorphism utility classes matching SRS spec */
+.glass-panel {
+  background: rgba(10, 6, 18, 0.65);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-lift {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-lift:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.65), 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+.glass-border-gradient {
+  position: relative;
+  background: rgba(10, 6, 18, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.glass-border-gradient::before {
+  content: '';
+  position: absolute;
+  top: -1px; bottom: -1px; left: -1px; right: -1px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.4), rgba(59, 10, 107, 0.8), rgba(0, 229, 255, 0.15));
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Glowing text and borders */
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 229, 255, 0.6), 0 0 24px rgba(0, 229, 255, 0.3);
+}
+
+.text-glow-amethyst {
+  text-shadow: 0 0 14px rgba(123, 63, 207, 0.7);
+}
+
+.border-glow-cyan {
+  border-color: #00E5FF;
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+}
+
+/* Atmospheric page background ambient light */
+.cyber-bg {
+  background-color: #050505;
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(59, 10, 107, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(59, 10, 107, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.05) 0%, transparent 60%);
+  background-attachment: fixed;
+}

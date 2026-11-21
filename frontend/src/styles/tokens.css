@@ -1,0 +1,42 @@
+:root {
+  --c-jet: #050505;
+  --c-amethyst: #3B0A6B;
+  --c-cyan: #00E5FF;
+  --surface-1: #0A0612;
+  --surface-2: #120A22;
+  --surface-3: #1A0F30;
+  --amethyst-300: #7B3FCF;
+  --amethyst-400: #5C16A3;
+  --amethyst-500: #3B0A6B;
+  --amethyst-900: #1A0433;
+  --cyan-300: #4DF3FF;
+  --cyan-400: #00E5FF;
+  --cyan-500: #00B8D4;
+  --text-1: #F5F3FF;
+  --text-2: #B9B0D4;
+  --text-3: #7D7396;
+  --border-1: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(0, 229, 255, 0.3);
+  --success: #2EE59D;
+  --danger: #FF4D6D;
+  --gold: #FFC857;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B0A6B;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E5FF;
+}
